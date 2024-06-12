@@ -20,10 +20,10 @@ const Navbar = ({theme,setTheme}) => {
     <img src={
         theme=="light"? logo_light: logo_dark} alt=" " className='logo'/>
     <ul>
-        <li>Home</li>
-        <li>Sites</li>
-        <li>About</li>
-        <li>Help</li>
+        <li><a href="/"> Home </a> </li>
+        <li><a href="/sites"> Sites </a> </li>
+        <li><a href="/about"> About </a></li>
+        <li><a href="/help"> Help </a> </li>
 
     </ul>
     <div className='search-box'>
