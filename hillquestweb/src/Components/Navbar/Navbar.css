@@ -1,81 +1,240 @@
-.navbar
-{
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-background: #fff;
-padding: 15px 7%;
-transition: 0.5s;
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 7%;
+    transition: 0.5s;
 }
 
-.logo{
+.logo {
     width: 160px;
     cursor: pointer;
 }
 
-ul
-{
-flex:1;
-list-style: none;
-text-align: center;
-
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
 }
 
-ul li{
-    display: inline-block;
-    margin: 10px 20px;
+.nav-links {
+    flex: 1;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
     font-size: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #242424;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box input {
+    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    max-width: 200px;
+}
+
+.search-box input::placeholder {
+    color: #fff;
+}
+
+.search-box img {
+    width: 20px;
     cursor: pointer;
 }
 
-.toggle-icon{
+.toggle-icon {
     width: 50px;
     cursor: pointer;
     margin-left: 40px;
 }
 
-.search-box{
+.auth-buttons {
     display: flex;
-    align-items: center;
-    background: #242424;
-    padding:10px 20px;
-    border-radius:50px;
+    gap: 10px;
 }
 
-.search-box input{
-    padding:6px;
+.auth-button {
     background: transparent;
-    border:0;
-    outline: 0;
+    border: 1px solid #1565c0;
+    color: #1565c0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.auth-button:hover {
+    background: #1565c0;
     color: #fff;
-    font-size:18;
-    max-width: 200px;
 }
 
-.search-box input::placeholder{
-    color:#fff;
-}
-.search-box img{
-    width: 20px;
-    cursor:pointer;
-}
-
-.dark .navbar{
+.dark .navbar {
     background: #000;
-    color:#fff;
+    color: #fff;
 }
-.dark .search-box{
+
+.dark .search-box {
     background: #fff;
-
 }
-.dark .search-box input{
 
-    color:#222;
-    
+.dark .search-box input {
+    color: #222;
 }
-.dark .search-box input::placeholder{
 
-    color:#222;
-    
+.dark .search-box input::placeholder {
+    color: #222;
+}
+
+.dark .nav-links a {
+    color: #fff;
+}
+
+.navbar ul li a:hover {
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: #1565c0;
+    letter-spacing: 2px;
+}
+
+.dark .navbar-toggler{
+    color: #fff;
+}
+
+.light .navbar-toggler{
+    color: #000;
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        text-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links.expanded {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .toggle-icon {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .toggle-icon {
+        width: 40px;
+    }
+
+    .search-box {
+        padding: 5px 10px;
+    }
+
+    .search-box input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .toggle-icon {
+        width: 30px;
+    }
+
+    .search-box {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .search-box input {
+        font-size: 14px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .auth-button {
+        width: 100%;
+        text-align: center;
+
+        margin-top: 5px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar.expanded .nav-links {
+        display: flex;
+    }
 }

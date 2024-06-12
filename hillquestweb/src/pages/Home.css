@@ -1,0 +1,35 @@
+/* Home.css */
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Ensure no scroll bars */
+  }
+  
+  .home-content {
+    position: relative;
+    z-index: 2; /* Ensure it's above the carousel */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Adjust carousel images */
+  .carousel .carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  /* Ensure carousel covers full height */
+  .carousel {
+    width: 100%;
+    height: 100vh;
+  }
+  
