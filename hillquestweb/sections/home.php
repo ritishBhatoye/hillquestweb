@@ -20,10 +20,8 @@
 
         </div>
           <?php include 'components/carousel.php'; ?>
-          <br/>
-          <br/>  
-          <br/> 
-          <br/>
+  
+     
           <br/>
           <?php include 'components/ourservice/ourservice.php'; ?>
               
