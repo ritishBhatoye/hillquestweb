@@ -7,7 +7,8 @@
     <style>
         .custom-font {
             font-family: 'Open Sans', sans-serif;
-            font-weight: 700; /* Adjust weight to make it bold */
+            font-weight: 700; /* Adju
+            t weight to make it bold */
             font-size: 46px; /* Adjust size as needed */
             text-align: center; /* Center align the text */
             margin: 20px; /* Add some margin for spacing */
